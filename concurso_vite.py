@@ -9,7 +9,7 @@ import sha3
 #variables de parametrizacion.
 _ficheroentrada='concurso_vite.txt'
 _ficherosalida='resultado_concurso_vite.txt'
-_itereaciones=999
+_iteraciones=999
 _lista={}
 
 #funcion que realiza las iteraciones del Hash
@@ -32,7 +32,7 @@ with  open(_ficheroentrada, 'r')  as fr:
     lines = list(line for line in (l.strip() for l in fr) if line)
     for line in lines:
         parametros=line.split(',')
-        valor=iteradorhash(_itereaciones,parametros[0])
+        valor=iteradorhash(_iteraciones,parametros[0])
         _lista[('0X' +valor).encode()]=parametros[0]
         print('procesado: ' +parametros[0])
 
